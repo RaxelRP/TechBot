@@ -104,11 +104,23 @@
         color: #fffb00;
       }
 
-      .category-moderation h3 {
-        color: #ffffff;
-        font-size: 20px;
+      /* Estilo para las categorías */
+      .category {
+        background-color: #f5f5f5;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: transform 0.2s;
+      }
+
+      .category h3 {
+        color: #068fff; /* Cambia este valor al color que desees, por ejemplo, #068fff */
+        font-size: 24px; /* Ajusta el tamaño del texto según tus preferencias */
         margin-bottom: 10px;
-        text-align: center;
+        text-align: left;
       }
 
       body {
@@ -135,19 +147,11 @@
           <h3>Categoría de Moderación</h3>
           <div class="command-card">
             <h3>/comando1</h3>
-            <p class="command-description">Descripción del comando 1.</p>
-            <div class="command-info hidden">
-              <p>Información detallada sobre /comando1.</p>
-              <p>Ejemplo de uso: /comando1 [opciones]</p>
-            </div>
+            <p>Descripción del comando 1.</p>
           </div>
           <div class="command-card">
             <h3>/comando2</h3>
-            <p class="command-description">Descripción del comando 2.</p>
-            <div class="command-info hidden">
-              <p>Información detallada sobre /comando2.</p>
-              <p>Ejemplo de uso: /comando2 [opciones]</p>
-            </div>
+            <p>Descripción del comando 2.</p>
           </div>
           <!-- Agrega más comandos de moderación aquí -->
         </div>
@@ -157,19 +161,11 @@
           <h3>Categoría de Diversión</h3>
           <div class="command-card">
             <h3>/comando3</h3>
-            <p class="command-description">Descripción del comando 3.</p>
-            <div class="command-info hidden">
-              <p>Información detallada sobre /comando3.</p>
-              <p>Ejemplo de uso: /comando3 [opciones]</p>
-            </div>
+            <p>Descripción del comando 3.</p>
           </div>
           <div class="command-card">
             <h3>/comando4</h3>
-            <p class="command-description">Descripción del comando 4.</p>
-            <div class="command-info hidden">
-              <p>Información detallada sobre /comando4.</p>
-              <p>Ejemplo de uso: /comando4 [opciones]</p>
-            </div>
+            <p>Descripción del comando 4.</p>
           </div>
           <!-- Agrega más comandos de diversión aquí -->
         </div>
@@ -182,19 +178,16 @@
       <p>&copy; 2023 Todos los Derechos Reservados</p>
     </footer>
     <script>
-      const commandCards = document.querySelectorAll(".command-card");
+      const categories = document.querySelectorAll(".category");
 
-      commandCards.forEach((card) => {
-        card.addEventListener("click", () => {
-          // Oculta todas las descripciones de comandos
-          commandCards.forEach((otherCard) => {
-            if (otherCard !== card) {
-              otherCard.querySelector(".command-info").classList.add("hidden");
-            }
+      categories.forEach((category) => {
+        const title = category.querySelector("h3");
+        const commands = category.querySelectorAll(".command-card");
+
+        title.addEventListener("click", () => {
+          commands.forEach((command) => {
+            command.classList.toggle("active");
           });
-
-          // Muestra u oculta la descripción del comando clickeado
-          card.querySelector(".command-info").classList.toggle("hidden");
         });
       });
     </script>
