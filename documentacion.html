@@ -182,28 +182,19 @@
       <p>&copy; 2023 Todos los Derechos Reservados</p>
     </footer>
     <script>
-      const categories = document.querySelectorAll(".category");
+      const commandCards = document.querySelectorAll(".command-card");
 
-      categories.forEach((category) => {
-        const title = category.querySelector("h3");
-        const commands = category.querySelectorAll(".command-card");
-
-        title.addEventListener("click", () => {
-          commands.forEach((command) => {
-            command.classList.toggle("active");
+      commandCards.forEach((card) => {
+        card.addEventListener("click", () => {
+          // Oculta todas las descripciones de comandos
+          commandCards.forEach((otherCard) => {
+            if (otherCard !== card) {
+              otherCard.querySelector(".command-info").classList.add("hidden");
+            }
           });
-        });
 
-        commands.forEach((command) => {
-          const description = command.querySelector(".command-description");
-          const info = command.querySelector(".command-info");
-
-          description.addEventListener("click", (event) => {
-            // Evita que el clic en la descripción propague al contenedor de la categoría.
-            event.stopPropagation();
-
-            info.classList.toggle("hidden");
-          });
+          // Muestra u oculta la descripción del comando clickeado
+          card.querySelector(".command-info").classList.toggle("hidden");
         });
       });
     </script>
