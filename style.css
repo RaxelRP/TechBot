@@ -1,0 +1,158 @@
+/* Reset de Estilos para Resetear los Estilos Predeterminados de los Navegadores */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos Globales */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #2c2c2c;
+}
+
+header {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #222;
+  color: #fff;
+}
+.faq-section,
+.members-list-section,
+.admin-section {
+  background-color: #f4f4f4;
+  padding: 4rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 44px;
+  color: #ff0000;
+  padding: 10px;
+  display: inline-block;
+  border-radius: 5px;
+  background-color: #07e2ff;
+}
+.faq-section h2,
+.admin-section h2,
+.members-list-section h2 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+.faq-question,
+.membership-card,
+.admin-member {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.price {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.faq-question p,
+h3,
+.membership-card ul,
+.admin-member p,
+p,
+h2,
+h3 {
+  list-style-type: disc;
+  text-align: center;
+  margin: 10px 0;
+  padding-left: 20px;
+}
+.faq-question p,
+h3,
+.membership-card li,
+.admin-member p,
+p,
+h2,
+h3 {
+  margin-bottom: 5px;
+}
+
+.team-title {
+  font-size: 42px;
+  color: #00aeff;
+  padding: 10px;
+  display: inline-block;
+  border-radius: 5px;
+  background-color: #31f700;
+}
+
+.admin-section {
+  min-height: calc(
+    100vh - 100px
+  ); /* Ajusta el valor 100px según tus necesidades */
+}
+
+/* Estilos para los botones */
+.btn {
+  background-color: #00ff4c;
+  color: #000000;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #d9ff00;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  header,
+  .home-section,
+  .members-list-section,
+  .admin-section {
+    padding: 2rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    background-color: #333;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+}
