@@ -45,15 +45,6 @@ footer {
   padding: 4rem;
   text-align: center;
 }
-
-.title {
-  font-size: 44px;
-  color: #ff0000;
-  padding: 10px;
-  display: inline-block;
-  border-radius: 5px;
-  background-color: #07e2ff;
-}
 .faq-section h2,
 .admin-section h2,
 .members-list-section h2 {
