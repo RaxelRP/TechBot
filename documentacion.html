@@ -5,8 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Documentación - Mi Bot de Discord</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="icono.png" type="image/x-icon" />
-    <link rel="shortcut icon" href="icono.png" type="image/x-icon" />
+    <link
+      rel="icon"
+      href="https://cdn.discordapp.com/attachments/1085996248198303815/1152533544728526939/party.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://cdn.discordapp.com/attachments/1085996248198303815/1152533544728526939/party.png"
+      type="image/x-icon"
+    />
     <style>
       /* Estilo para el encabezado */
       header {
@@ -47,10 +55,12 @@
         padding: 20px;
         margin: 10px;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: transform 0.2s;
       }
 
       .command-card h3 {
-        color: #068fff;
+        color: #000000;
         font-size: 20px;
         margin-bottom: 10px;
         text-align: left;
@@ -59,6 +69,15 @@
       .command-card p {
         font-size: 16px;
         color: #333333;
+        display: none;
+      }
+
+      .command-card:hover {
+        transform: scale(1.05);
+      }
+
+      .command-card.active p {
+        display: block;
       }
 
       /* Estilo para el pie de página */
@@ -82,7 +101,7 @@
       }
 
       .btn-start:hover {
-        background-color: #fffb00;
+        color: #fffb00;
       }
     </style>
   </head>
@@ -118,5 +137,14 @@
       <a href="index.html" class="btn-start">Inicio</a>
       <p>&copy; 2023 Todos los Derechos Reservados</p>
     </footer>
+    <script>
+      const commandCards = document.querySelectorAll(".command-card");
+
+      commandCards.forEach((card) => {
+        card.addEventListener("click", () => {
+          card.classList.toggle("active");
+        });
+      });
+    </script>
   </body>
 </html>
