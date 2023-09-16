@@ -73,6 +73,8 @@
         padding: 20px;
         margin: 10px 0;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: transform 0.2s;
       }
 
       .command-card h3 {
@@ -171,16 +173,11 @@
       <p>&copy; 2023 Todos los Derechos Reservados</p>
     </footer>
     <script>
-      const categories = document.querySelectorAll(".category");
+      const commandCards = document.querySelectorAll(".command-card");
 
-      categories.forEach((category) => {
-        const commandCards = category.querySelectorAll(".command-card");
-        const title = category.querySelector("h3");
-
-        title.addEventListener("click", () => {
-          commandCards.forEach((command) => {
-            command.classList.toggle("active");
-          });
+      commandCards.forEach((card) => {
+        card.addEventListener("click", () => {
+          card.classList.toggle("active");
         });
       });
     </script>
