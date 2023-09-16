@@ -128,11 +128,19 @@
           <h3>Categoría de Moderación</h3>
           <div class="command-card">
             <h3>/comando1</h3>
-            <p>Descripción del comando 1.</p>
+            <p class="command-description">Descripción del comando 1.</p>
+            <div class="command-info hidden">
+              <p>Información detallada sobre /comando1.</p>
+              <p>Ejemplo de uso: /comando1 [opciones]</p>
+            </div>
           </div>
           <div class="command-card">
             <h3>/comando2</h3>
-            <p>Descripción del comando 2.</p>
+            <p class="command-description">Descripción del comando 2.</p>
+            <div class="command-info hidden">
+              <p>Información detallada sobre /comando2.</p>
+              <p>Ejemplo de uso: /comando2 [opciones]</p>
+            </div>
           </div>
           <!-- Agrega más comandos de moderación aquí -->
         </div>
@@ -142,11 +150,19 @@
           <h3>Categoría de Diversión</h3>
           <div class="command-card">
             <h3>/comando3</h3>
-            <p>Descripción del comando 3.</p>
+            <p class="command-description">Descripción del comando 3.</p>
+            <div class="command-info hidden">
+              <p>Información detallada sobre /comando3.</p>
+              <p>Ejemplo de uso: /comando3 [opciones]</p>
+            </div>
           </div>
           <div class="command-card">
             <h3>/comando4</h3>
-            <p>Descripción del comando 4.</p>
+            <p class="command-description">Descripción del comando 4.</p>
+            <div class="command-info hidden">
+              <p>Información detallada sobre /comando4.</p>
+              <p>Ejemplo de uso: /comando4 [opciones]</p>
+            </div>
           </div>
           <!-- Agrega más comandos de diversión aquí -->
         </div>
@@ -168,6 +184,18 @@
         title.addEventListener("click", () => {
           commands.forEach((command) => {
             command.classList.toggle("active");
+          });
+        });
+
+        commands.forEach((command) => {
+          const description = command.querySelector(".command-description");
+          const info = command.querySelector(".command-info");
+
+          description.addEventListener("click", (event) => {
+            // Evita que el clic en la descripción propague al contenedor de la categoría.
+            event.stopPropagation();
+
+            info.classList.toggle("hidden");
           });
         });
       });
