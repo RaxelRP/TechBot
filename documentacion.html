@@ -65,13 +65,6 @@
         text-align: left;
       }
 
-      .category-description {
-        font-size: 16px;
-        color: #333333;
-        text-align: left;
-        margin-bottom: 10px;
-      }
-
       /* Estilo para las tarjetas de comandos */
       .command-card {
         background-color: #000000;
@@ -145,38 +138,30 @@
         <!-- Categoría 1: Comandos de Moderación -->
         <div class="category" id="category-moderation">
           <h3>Categoría de Moderación</h3>
-          <div class="category-description">
-            Descripción de la categoría de moderación.
+          <div class="command-card">
+            <h3>/comando1</h3>
+            <p>Descripción del comando 1.</p>
           </div>
+          <div class="command-card">
+            <h3>/comando2</h3>
+            <p>Descripción del comando 2.</p>
+          </div>
+          <!-- Agrega más comandos de moderación aquí -->
         </div>
-
-        <div class="command-card">
-          <h3>/comando1</h3>
-          <p>Descripción del comando 1.</p>
-        </div>
-        <div class="command-card">
-          <h3>/comando2</h3>
-          <p>Descripción del comando 2.</p>
-        </div>
-        <!-- Agrega más comandos de moderación aquí -->
 
         <!-- Categoría 2: Comandos de Diversión -->
         <div class="category" id="category-fun">
           <h3>Categoría de Diversión</h3>
-          <div class="category-description">
-            Descripción de la categoría de diversión.
+          <div class="command-card">
+            <h3>/comando3</h3>
+            <p>Descripción del comando 3.</p>
           </div>
+          <div class="command-card">
+            <h3>/comando4</h3>
+            <p>Descripción del comando 4.</p>
+          </div>
+          <!-- Agrega más comandos de diversión aquí -->
         </div>
-
-        <div class="command-card">
-          <h3>/comando3</h3>
-          <p>Descripción del comando 3.</p>
-        </div>
-        <div class="command-card">
-          <h3>/comando4</h3>
-          <p>Descripción del comando 4.</p>
-        </div>
-        <!-- Agrega más comandos de diversión aquí -->
 
         <!-- Agrega más categorías y comandos aquí -->
       </section>
@@ -189,11 +174,13 @@
       const categories = document.querySelectorAll(".category");
 
       categories.forEach((category) => {
+        const commandCards = category.querySelectorAll(".command-card");
         const title = category.querySelector("h3");
-        const description = category.querySelector(".category-description");
 
         title.addEventListener("click", () => {
-          category.classList.toggle("active");
+          commandCards.forEach((command) => {
+            command.classList.toggle("active");
+          });
         });
       });
     </script>
