@@ -41,7 +41,9 @@ footer {
 .faq-section,
 .members-list-section,
 .admin-section,
-.support-section {
+.support-section,
+.resume-section,
+.resume-section2 {
   background-color: #f4f4f4;
   padding: 4rem;
   text-align: center;
@@ -49,7 +51,9 @@ footer {
 .faq-section h2,
 .admin-section h2,
 .members-list-section h2,
-.support-section h2 {
+.support-section h2,
+.resume-section h2,
+.resume-section2 h2 {
   color: #333;
   margin-bottom: 1rem;
 }

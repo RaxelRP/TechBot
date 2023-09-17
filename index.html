@@ -9,7 +9,7 @@
     <meta property="og:title" content="Raxel RP" />
     <meta
       property="og:description"
-      content="Bienvenido a la pagina web oficial de TechBot, un bot de discord multifuncional con varios comandos y mucho mas!"
+      content="Bienvenido a la página web oficial de TechBot, un bot de Discord multifuncional con varios comandos y mucho más!"
     />
     <meta
       property="og:image"
@@ -28,16 +28,9 @@
       type="image/x-icon"
     />
     <style>
-      .btn-start {
-        color: #ffffff; /* Cambia este color al que desees */
-        font-size: 16px;
-        padding: 10px 20px;
-        cursor: pointer;
-        text-decoration: none;
-      }
-
+      .btn-start,
       .btn-discord {
-        color: #ffffff; /* Cambia este color al que desees */
+        color: #ffffff;
         font-size: 16px;
         padding: 10px 20px;
         cursor: pointer;
@@ -47,19 +40,42 @@
       .btn-start:hover {
         color: #fffb00;
       }
+
       .btn-discord:hover {
-        /* Cambia el color al que desees cuando el ratón esté encima */
         color: #068fff;
       }
-      .resume-section {
+
+      .resume-section section {
         display: flex;
         align-items: center;
-        justify-content: flex-start; /* Alinea a la izquierda */
-        margin-top: 20px; /* Espacio superior */
+        justify-content: flex-start;
       }
 
-      .image-container {
-        margin-right: 20px; /* Espacio entre la imagen y el texto */
+      .resume-section2 section {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+      }
+
+      .image-container img {
+        margin-right: 20px; /* Espacio entre la imagen y el texto a la derecha */
+      }
+
+      .image-container2 img {
+        margin-right: 20px;
+        /* Espacio entre la imagen y el texto a la derecha */
+      }
+
+      .text-content,
+      .text-content p {
+        color: black;
+        flex: 1; /* Haz que el texto ocupe todo el espacio disponible */
+      }
+
+      .text-content2,
+      .text-content2 p {
+        color: black;
+        flex: 1; /* Haz que el texto ocupe todo el espacio disponible */
       }
     </style>
   </head>
@@ -76,28 +92,47 @@
     </header>
     <main>
       <header class="home-header">
-        <h1>¡Benvenido a la página web oficial de TechBot!</h1>
+        <h1>¡Bienvenido a la página web oficial de TechBot!</h1>
         <p>
-          Únete a nuestra comunidad y disfruta de Ventajas exlusivas del bot.
+          Únete a nuestra comunidad y disfruta de ventajas exclusivas del bot.
         </p>
+        <br />
         <div class="resume-section">
-          <div class="image-container">
-            <img
-              src="https://cdn.discordapp.com/attachments/1152928002741633084/1152993751732596746/image.png"
-            />
-          </div>
-          <div class="text-content">
-            <h3>Comandos de configuracion</h3>
-            <p>
-              TechBot cuenta con una variedad de comandos de configuracion para
-              adaptar el bot a su gusto. Entre muchos encontrará un comando para
-              establecer el prefijo del bot, otro comando para gestrionar las
-              bienvenidas, otro mas para gestionar los eventos y mucho mas!
-            </p>
-          </div class="image-container2">
-          <img
-          src=""
+          <section>
+            <div class="image-container">
+              <img
+                src="https://cdn.discordapp.com/attachments/1152928002741633084/1152993751732596746/image.png"
+              />
+            </div>
+            <div class="text-content">
+              <h2>Comandos de configuración</h2>
+              <p>
+                TechBot cuenta con una variedad de comandos de configuración
+                para adaptar el bot a su gusto. <br />Entre muchos encontrará un
+                comando para establecer el prefijo del bot, <br />otro comando
+                para gestionar las bienvenidas, otro más para gestionar los
+                eventos y mucho más!
+              </p>
+            </div>
+          </section>
         </div>
+        <div class="resume-section2">
+          <section>
+            <div class="text-content2">
+              <h2>Comandos de moderación</h2>
+              <p>
+                Y si, que hariamos si un bot no tiene comandos de moderacion,
+                pues TechBot <br />cuenta con una variedad de comandos muy
+                utiles,<br />
+                como por ejemplo los que se ven en la imagen.
+              </p>
+            </div>
+            <div class="image-container2">
+              <img
+                src="https://cdn.discordapp.com/attachments/1152691938596749332/1153071530662695034/image.png"
+              />
+            </div>
+          </section>
         </div>
       </header>
       <footer>
