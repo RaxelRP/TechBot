@@ -36,18 +36,20 @@ footer {
   text-align: center;
   padding: 1rem;
   background-color: #222;
-  color: #fff;
+  color: #ffffff;
 }
 .faq-section,
 .members-list-section,
-.admin-section {
+.admin-section,
+.support-section {
   background-color: #f4f4f4;
   padding: 4rem;
   text-align: center;
 }
 .faq-section h2,
 .admin-section h2,
-.members-list-section h2 {
+.members-list-section h2,
+.support-section h2 {
   color: #333;
   margin-bottom: 1rem;
 }
@@ -154,4 +156,8 @@ h3 {
   text-align: center;
   width: 300px;
   display: inline-block;
+}
+.admin-member img {
+  width: 100px; /* Establece el ancho deseado, por ejemplo, 150 píxeles */
+  height: 125px; /* Establece la altura deseada, por ejemplo, 100 píxeles */
 }
