@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Raxel RP</title>
+    <title>TechBot</title>
     <link rel="stylesheet" href="style.css" />
     <!-- Metadatos Open Graph (og) -->
-    <meta property="og:title" content="Raxel RP" />
+    <meta property="og:title" content="TechBot" />
     <meta
       property="og:description"
       content="Bienvenido a la página web oficial de TechBot, un bot de Discord multifuncional con varios comandos y mucho más!"
@@ -44,7 +44,6 @@
       .btn-discord:hover {
         color: #068fff;
       }
-
       .resume-section section {
         display: flex;
         align-items: center;
@@ -59,34 +58,72 @@
 
       .image-container img {
         margin-right: 20px; /* Espacio entre la imagen y el texto a la derecha */
+        border-radius: 5%;
       }
 
       .image-container2 img {
         margin-right: 20px;
+        border-radius: 5%;
         /* Espacio entre la imagen y el texto a la derecha */
       }
 
       .text-content,
-      .text-content p {
-        color: black;
-        flex: 1; /* Haz que el texto ocupe todo el espacio disponible */
-      }
-
+      .text-content p,
       .text-content2,
       .text-content2 p {
         color: black;
         flex: 1; /* Haz que el texto ocupe todo el espacio disponible */
+      }
+      .imagen-circular {
+        margin-right: 0px; /* Espacio entre la imagen y el texto */
+        border-radius: 50%;
+        width: 100px; /* Ancho de la imagen */
+        height: 100px; /* Altura de la imagen */
+      }
+      .nav-links {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+      }
+      .nav-links li {
+        margin-right: 20px; /* Espacio entre los enlaces */
+      }
+      .nav-links li a {
+        color: #ffffff;
+        font-size: 16px;
+        padding: 10px 20px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: color 0.3s, transform 0.3s; /* Transición suave para el cambio de color y transformación */
+      }
+
+      /* Estilos para el efecto hover */
+      .nav-links li a:hover {
+        color: #01eeff; /* Color al pasar el cursor */
       }
     </style>
   </head>
   <body>
     <header>
       <nav>
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="documentacion.html">Documentacion</a></li>
-          <li><a href="soporte.html">Soporte</a></li>
-          <li><a href="faq.html">FAQ</a></li>
+        <ul class="nav-links">
+          <li>
+            <a href="index.html">
+              <img
+                src="https://cdn.discordapp.com/attachments/1152691938596749332/1153389516447547473/party_1.png"
+                class="imagen-circular"
+              />
+            </a>
+          </li>
+          <li><a href="index.html" class="inicio-btn">Inicio</a></li>
+          <li>
+            <a href="documentacion.html" class="documentacion-btn"
+              >Documentacion</a
+            >
+          </li>
+          <li><a href="soporte.html" class="soporte-btn">Soporte</a></li>
+          <li><a href="faq.html" class="faq-btn">FAQ</a></li>
         </ul>
       </nav>
     </header>
