@@ -76,6 +76,7 @@
         font-size: 16px;
         color: #ffffff;
         display: none;
+        text-align: left;
       }
 
       .command-card:hover {
@@ -139,6 +140,17 @@
       .nav-links li a:hover {
         color: #01eeff; /* Color al pasar el cursor */
       }
+      .info-section {
+        background-color: #bdbdbd;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 10px 0;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+      .info-section h3 {
+        text-align: left;
+      }
     </style>
   </head>
   <body>
@@ -171,18 +183,141 @@
           Aqui encontrarás todos los comandos disponibles, una descripcion para
           cada comando y un ejemplo de su uso
         </h3>
+        <br />
+        <div class="info-section">
+          <h2>Información de uso</h2>
+          <br />
+          <h3>
+            Prefijo: "t!", configurable.<br /><br />
+            Los corchetes [ ] indican que la opcion de dicho comando es
+            opcional.<br />
+            Los signos <> indican que la opcion de dicho comando es requerida.
+          </h3>
+        </div>
+        <div class="category" id="category-moderation">
+          <h3>Comandos de Configuración (7)</h3>
+          <div class="command-card">
+            <h3>/configban - Canal para los baneos</h3>
+            <p>
+              <br />Con este comando podrás configurar el canal para los logs de
+              los baneos, solo disponible para administradores.<br />
+              Uso:<br />
+              /configban &lt;canal&gt;
+            </p>
+          </div>
+          <div class="command-card">
+            <h3>/configbienvenidas - Canal y estado para las bienvenidas</h3>
+            <p>
+              <br />Este comando sirve para configurar el modulo de bienvenidas,
+              permitiendo activarlo o desactivarlo y eligir un canal para las
+              bienvenidas, solo disponible para administradores.<br />
+              Uso:<br />
+              /configbienvenidas &lt;activar&gt; &lt;canal&gt;
+            </p>
+          </div>
+          <div class="command-card">
+            <h3>/configdespedidas - Canal y estado para las despedidas</h3>
+            <p>
+              <br />Este comando sirve para configurar el modulo de despedidas,
+              permitiendo activarlo o desactivarlo y eligir un canal para las
+              despedidas, solo disponible para administradores.<br />
+              Uso:<br />
+              /configdespedidas &lt;activar&gt; &lt;canal&gt;
+            </p>
+          </div>
+
+          <div class="command-card">
+            <h3>/configlogs - Canal para los logs</h3>
+            <p>
+              <br />Este comando sirve para configurar el canal en donde se
+              enviarán todos los logs generales, solo disponible para
+              administradores.<br />
+              Uso:<br />
+              /configlogs &lt;canal&gt;
+            </p>
+          </div>
+          <div class="command-card">
+            <h3>/setprefix - Establece el prefijo</h3>
+            <p>
+              <br />Con este comando podrás configurar el prefijo del bot, solo
+              disponible para administradores.<br />
+              Uso:<br />
+              /setprefix &lt;prefix&gt;
+            </p>
+          </div>
+          <div class="command-card">
+            <h3>/configroleadd - Establece el rol para usuarios</h3>
+            <p>
+              <br />Este comando establece el rol a dar para los nuevos
+              usuarios, tambien con la opcion de activarlo o desactivarlo, solo
+              disponible para administradores.<br />
+              Uso:<br />
+              /configroleadd &lt;rol&gt; &lt;status&gt;
+            </p>
+          </div>
+          <div class="command-card">
+            <h3>/toggleallevents - Activa o desactiva los eventos</h3>
+            <p>
+              <br />Este comando activa o desactiva los eventos generales para
+              todo el servidor, solo disponible para administradores.<br />
+              Uso:<br />
+              /toggleallevents &lt;activar&gt;
+            </p>
+          </div>
+
+          <!-- Agrega más comandos de moderación aquí -->
+        </div>
 
         <!-- Categoría 1: Comandos de Moderación -->
         <div class="category" id="category-moderation">
-          <h3>Comandos de Moderación</h3>
+          <h3>Comandos de Moderación (5)</h3>
           <div class="command-card">
             <h3>/ban - Banea a un usuario</h3>
-            <p>Comando para banear usuarios.</p>
+            <p>
+              <br />Este comando sirve para banear a un usuario del servidor, es
+              para baneo permantente, solo disponible para administradores.<br />
+              Uso:<br />
+              /ban &lt;usuario&gt; &lt;razon&gt;
+            </p>
           </div>
           <div class="command-card">
-            <h3>/mute - Silencia a un usuario</h3>
-            <p>Aisla temporalmente a un usuario.</p>
+            <h3>/clear - Elimina mensajes</h3>
+            <p>
+              <br />Con este comando podrás eliminar una cantidad de mensajes en
+              un canal o de un usuario, solo disponible para administradores.<br />
+              Uso:<br />
+              /clear &lt;mensajes&gt; [usuario]
+            </p>
           </div>
+          <div class="command-card">
+            <h3>/kick - Expulsa a un usuario</h3>
+            <p>
+              <br />Con este comando se puede expulsar a un suaurio del
+              servidor, solo disponible para administradores.<br />
+              Uso:<br />
+              /kick &lt;usuario&gt; [razon]
+            </p>
+          </div>
+
+          <div class="command-card">
+            <h3>/mute - Silencia a un usuario</h3>
+            <p>
+              <br />Aisla temporalmente a un usuario, solo disponible para
+              administradores.<br />
+              Uso:<br />
+              /mute &lt;usuario&gt; &lt;tiempo&gt; [razon]
+            </p>
+          </div>
+          <div class="command-card">
+            <h3>/unban - Desbanea a un usuario</h3>
+            <p>
+              <br />Con este comando podrás desbanear usuarios baneados del
+              servidor, solo disponible para administradores.<br />
+              Uso:<br />
+              /unban &lt;userid&gt;
+            </p>
+          </div>
+
           <!-- Agrega más comandos de moderación aquí -->
         </div>
 
