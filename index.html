@@ -29,7 +29,8 @@
     />
     <style>
       .btn-start,
-      .btn-discord {
+      .btn-discord,
+      .btn-politicaprivacidad {
         color: #ffffff;
         font-size: 16px;
         padding: 10px 20px;
@@ -43,6 +44,10 @@
 
       .btn-discord:hover {
         color: #068fff;
+      }
+
+      .btn-politicaprivacidad:hover {
+        color: #922222;
       }
       .resume-section section {
         display: flex;
@@ -102,9 +107,53 @@
       .nav-links li a:hover {
         color: #01eeff; /* Color al pasar el cursor */
       }
+
+      .header {
+        color: #ffffff;
+        text-align: center;
+        padding: 100px;
+      }
+
+      .header h1 {
+        font-size: 36px;
+      }
+
+      .resume-section,
+      .resume-section2 {
+        background-color: #ffffff;
+        padding: 40px;
+        margin: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .resume-section h2,
+      .resume-section2 h2 {
+        color: #0073e6;
+        font-size: 24px;
+      }
+
+      .resume-section p,
+      .resume-section2 p {
+        font-size: 16px;
+      }
+
+      .button {
+        background-color: #0073e6;
+        color: #ffffff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      .button:hover {
+        background-color: #0051a1;
+      }
     </style>
   </head>
-  <body>
+  <body class="scroll-down">
     <header>
       <nav>
         <ul class="nav-links">
@@ -176,6 +225,9 @@
         &nbsp;
         <a href="index.html" class="btn-start">Inicio</a> &nbsp; &nbsp; &nbsp;
         <a href="https://discord.gg/jHvntU7jCp" class="btn-discord">Discord</a>
+        <a href="politicaprivacidad.html" class="btn-politicaprivacidad"
+          >Politica de Privacidad</a
+        >
         <p>&copy; 2023 Todos los Derechos Reservados</p>
       </footer>
     </main>

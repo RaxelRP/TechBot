@@ -39,25 +39,30 @@ footer {
   color: #ffffff;
 }
 .faq-section,
+.privacy-section,
 .members-list-section,
 .admin-section,
 .support-section,
 .resume-section,
-.resume-section2 {
+.resume-section2,
+.introduction {
   background-color: #f4f4f4;
   padding: 4rem;
   text-align: center;
 }
 .faq-section h2,
 .admin-section h2,
+.privacy-section h2,
 .members-list-section h2,
 .support-section h2,
 .resume-section h2,
-.resume-section2 h2 {
+.resume-section2 h2,
+.introduction h2 {
   color: #333;
   margin-bottom: 1rem;
 }
 .faq-question,
+.privacy-policy,
 .membership-card {
   margin: 20px;
   padding: 20px;
@@ -70,7 +75,8 @@ footer {
   font-weight: bold;
   margin-top: 10px;
 }
-
+.privacy-policy p,
+h3,
 .faq-question p,
 h3,
 .membership-card ul,
@@ -83,6 +89,8 @@ h3 {
   margin: 10px 0;
   padding-left: 20px;
 }
+.privacy-policy p,
+h3,
 .faq-question p,
 h3,
 .membership-card li,
