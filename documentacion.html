@@ -89,16 +89,10 @@
 
       /* Estilo para el pie de página */
 
-      .btn-start {
-        color: #ffffff; /* Cambia este color al que desees */
-        font-size: 16px;
-        padding: 10px 20px;
-        cursor: pointer;
-        text-decoration: none;
-      }
-
-      .btn-discord {
-        color: #ffffff; /* Cambia este color al que desees */
+      .btn-start,
+      .btn-discord,
+      .btn-politicaprivacidad {
+        color: #ffffff;
         font-size: 16px;
         padding: 10px 20px;
         cursor: pointer;
@@ -106,11 +100,15 @@
       }
 
       .btn-start:hover {
-        color: #e6ff04;
+        color: #fffb00;
       }
+
       .btn-discord:hover {
-        /* Cambia el color al que desees cuando el ratón esté encima */
-        color: #0873ff;
+        color: #068fff;
+      }
+
+      .btn-politicaprivacidad:hover {
+        color: #922222;
       }
       .imagen-circular {
         margin-right: 0px; /* Espacio entre la imagen y el texto */
@@ -173,6 +171,13 @@
           </li>
           <li><a href="soporte.html" class="soporte-btn">Soporte</a></li>
           <li><a href="faq.html" class="faq-btn">FAQ</a></li>
+          <li>
+            <a
+              href="https://discord.com/api/oauth2/authorize?client_id=1152681133931249685&permissions=8&scope=bot"
+              class="invitar-btn"
+              >Invitar</a
+            >
+          </li>
         </ul>
       </nav>
     </header>
@@ -225,15 +230,27 @@
               /configdespedidas &lt;activar&gt; &lt;canal&gt;
             </p>
           </div>
-
           <div class="command-card">
-            <h3>/configlogs - Canal para los logs</h3>
+            <h3>/stats-setup - Estadisticas para el servidor</h3>
             <p>
-              <br />Este comando sirve para configurar el canal en donde se
-              enviarán todos los logs generales, solo disponible para
+              <br />Este comando configura el canal para mostrar las
+              estadisticas del bot, el canal tiene que ser de voz y habrá tres
+              estadisticas a mostrar. Numero de usuarios, numero de bots y
+              numero total de bots y de usuarios, solo disponible para
               administradores.<br />
               Uso:<br />
-              /configlogs &lt;canal&gt;
+              /stats-setup &lt;canal&gt; &lt;type&gt; &lt;nombre&gt;
+            </p>
+          </div>
+
+          <div class="command-card">
+            <h3>/configlogs - Configura los logs</h3>
+            <p>
+              <br />Este comando sirve para configurar el canal en donde se
+              enviarán todos los logs generales y si estarán activados o no,
+              solo disponible para administradores.<br />
+              Uso:<br />
+              /configlogs &lt;canal&gt; &lt;activar&gt;
             </p>
           </div>
           <div class="command-card">
@@ -255,22 +272,22 @@
               /configroleadd &lt;rol&gt; &lt;status&gt;
             </p>
           </div>
-          <div class="command-card">
-            <h3>/toggleallevents - Activa o desactiva los eventos</h3>
-            <p>
-              <br />Este comando activa o desactiva los eventos generales para
-              todo el servidor, solo disponible para administradores.<br />
-              Uso:<br />
-              /toggleallevents &lt;activar&gt;
-            </p>
-          </div>
 
           <!-- Agrega más comandos de moderación aquí -->
         </div>
 
         <!-- Categoría 1: Comandos de Moderación -->
         <div class="category" id="category-moderation">
-          <h3>Comandos de Moderación (5)</h3>
+          <h3>Comandos de Moderación (7)</h3>
+          <div class="command-card">
+            <h3>/addrole - Añadir roles</h3>
+            <p>
+              <br />Con este comando podrás añadirle roles a un usuarios
+              facilmente, solo disponible para administradores.<br />
+              Uso:<br />
+              /addrole &lt;usuario&gt; &lt;rol&gt;
+            </p>
+          </div>
           <div class="command-card">
             <h3>/ban - Banea a un usuario</h3>
             <p>
@@ -309,6 +326,15 @@
             </p>
           </div>
           <div class="command-card">
+            <h3>/removerole - Retirar roles</h3>
+            <p>
+              <br />Con este comando podrás retirarle los roles a un usuarios,
+              solo disponible para administradores.<br />
+              Uso:<br />
+              /removerole &lt;usuario&gt; &lt;rol&gt;
+            </p>
+          </div>
+          <div class="command-card">
             <h3>/unban - Desbanea a un usuario</h3>
             <p>
               <br />Con este comando podrás desbanear usuarios baneados del
@@ -323,7 +349,17 @@
 
         <!-- Categoría 2: Comandos de Diversión -->
         <div class="category" id="category-public">
-          <h3>Comandos publicos (5)</h3>
+          <h3>Comandos publicos (7)</h3>
+          <div class="command-card">
+            <h3>/embed- Envia un embed</h3>
+            <p>
+              Este comando envia un embed personalizado a un canal, solo
+              disponible para administradores.<br />
+              Uso:<br />
+              /embed &lt;canal&gt; [titulo] [descripcion] [miniatura] [imagen]
+              [piedepagina] [color] [hora] [autor]
+            </p>
+          </div>
           <div class="command-card">
             <h3>/serverinfo - Informacion del servidor</h3>
             <p>
@@ -359,12 +395,15 @@
             </p>
           </div>
           <div class="command-card">
-            <h3>t!encuesta - Envia una encuesta a los usuarios</h3>
+            <h3>t!encuesta o /encuesta- Envia una encuesta a los usuarios</h3>
             <p>
-              Este comando envia una encuesta para los usuarios del servidor.<br />
+              Este comando envia una encuesta para los usuarios del servidor,
+              solo disponible para administradores.<br />
               Uso:<br />
               t!encuesta &lt;pregunta&gt;. &lt;opcion 1&gt;, &lt;opcion 2&gt;,
               ...<br />
+              /encuesta &lt;pregunta&gt; &lt;opciones&gt;
+              <br />
               Nota: Importante poner punto al final de la pregunta y separar las
               opciones por comas.
             </p>
